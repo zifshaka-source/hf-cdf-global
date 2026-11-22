@@ -1,0 +1,6 @@
+{
+  "name": "HF-CDF — Autonomous Cyber Defense Force",
+  "description": "Enterprise multi-agent autonomous cyber defense command platform featuring Red & Blue force operations, threat intelligence, attack simulation, and incident management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

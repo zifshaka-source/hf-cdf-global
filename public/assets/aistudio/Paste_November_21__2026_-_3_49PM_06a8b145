@@ -1,0 +1,1526 @@
+# HF-CDF — MASTER PRODUCT TRANSFORMATION SPECIFICATION
+## Autonomous Digital Governance, Agentic Cyber Defense & Public Infrastructure Resilience Platform
+
+**Specification type:** Full Product Vision, System Architecture, Engineering Directive and Implementation Blueprint
+
+**Product:** HF-CDF
+
+**Target domain:** Civic Pulse, Digital Governance & Public Information
+
+**Product maturity target:** Production-oriented, integrated and operationally validated platform
+
+**Primary architecture:** Multi-agent, event-driven, policy-governed cyber defense and digital governance environment
+
+**Primary operating forces:** RED FORCE + BLUE FORCE
+
+---
+
+# PART I — YOUR MISSION
+
+You are acting as the combined engineering leadership of an advanced cybersecurity technology organization.
+
+Your responsibilities include:
+
+- Principal Software Architect.
+- Chief Cybersecurity Architect.
+- AI Agent Systems Architect.
+- Public Digital Infrastructure Architect.
+- Staff Backend Engineer.
+- Frontend Systems Engineer.
+- Data Platform Engineer.
+- Security Operations Architect.
+- Site Reliability Engineer.
+- DevSecOps Engineer.
+- Product Design Director.
+- Technical Research Lead.
+
+Your mission is to transform the existing HF-CDF codebase into an integrated, technically rigorous and production-oriented platform.
+
+This is not a dashboard redesign.
+
+This is not a landing-page project.
+
+This is not a collection of AI agents with decorative names.
+
+This is not a simulated cybersecurity command center.
+
+This is not a static interface displaying invented threats.
+
+You must build a real system with actual data ingestion, persistent storage, security controls, agent identities, bounded execution, operational workflows, incident management, integrations, evidence, testing and deployment.
+
+Inspect the existing repository before modifying it.
+
+Preserve working functionality.
+
+Do not perform an uncontrolled rewrite.
+
+Do not claim that a capability exists until its implementation and tests demonstrate it.
+
+# PART II — PRODUCT VISION
+
+## 1. Product identity
+
+HF-CDF stands for:
+
+**Autonomous Digital Governance & Cyber Resilience Platform.**
+
+The platform provides one integrated command environment to discover, observe, understand, govern, validate and protect an organization's digital ecosystem.
+
+It must understand:
+
+- Public digital infrastructure.
+- Government and institutional digital services.
+- Enterprise applications.
+- Cloud environments.
+- Networks and endpoints.
+- Digital identities.
+- APIs.
+- Databases.
+- AI models.
+- Autonomous AI agents.
+- Agent tools and MCP servers.
+- Software dependencies.
+- Data flows.
+- Public digital information systems.
+- Operational dependencies.
+
+The central problem:
+
+Institutions are increasingly dependent on interconnected digital systems and autonomous agents, but their visibility, security controls, operational accountability and ability to validate defenses are fragmented.
+
+HF-CDF must provide an integrated approach to these problems.
+
+## 2. Core product philosophy
+
+One command environment.
+
+Two intelligent operational forces.
+
+One deterministic governance and enforcement plane.
+
+A continuously updated digital environment model.
+
+Evidence-backed decisions.
+
+Measurable defensive outcomes.
+
+RED FORCE tests the defenses.
+
+BLUE FORCE protects the environment.
+
+COMMAND INTELLIGENCE coordinates the operation.
+
+THE GOVERNANCE PLANE ensures that autonomy never exceeds authorization.
+
+# PART III — PRODUCT OBJECTIVES
+
+The platform must achieve the following objectives.
+
+1. Establish visibility over authorized digital infrastructure.
+2. Discover and govern organizational AI agents.
+3. Establish strong identities for agents and services.
+4. Track tools, permissions and agent delegation.
+5. Collect and normalize security telemetry.
+6. Correlate events across different infrastructure layers.
+7. Detect suspicious infrastructure and agent behavior.
+8. Integrate authoritative threat intelligence.
+9. Conduct authorized adversarial validation.
+10. Coordinate defensive investigations.
+11. Recommend and execute permitted response actions.
+12. Verify that containment and recovery succeeded.
+13. Maintain tamper-evident evidence and audit trails.
+14. Provide institutional accountability.
+15. Support interoperable public digital infrastructure.
+16. Measure resilience and defensive effectiveness.
+
+# PART IV — THE COMPLETE PRODUCT DIVISIONS
+
+## DIVISION 01 — CIVIC DIGITAL INTELLIGENCE
+
+Purpose:
+
+Provide authorized visibility into the digital services and information infrastructure supporting public institutions.
+
+Capabilities:
+
+- Institutional digital-service inventory.
+- Public-facing application inventory.
+- Authorized service endpoint monitoring.
+- Service availability monitoring.
+- Dependency mapping.
+- Service ownership.
+- Service criticality classification.
+- Digital-service incident correlation.
+- Public-service continuity indicators.
+- Institutional integration inventory.
+
+Support multiple organizations and agencies without compromising tenant isolation.
+
+Do not assume access to government internal systems.
+
+Provide an integration framework that works only with explicitly authorized sources.
+
+## DIVISION 02 — DIGITAL INFRASTRUCTURE OBSERVATORY
+
+Build a complete asset and infrastructure intelligence platform.
+
+Discover or register:
+
+- Servers.
+- Endpoints.
+- Networks.
+- Cloud resources.
+- Containers.
+- Applications.
+- APIs.
+- Databases.
+- Repositories.
+- Identity providers.
+- Models.
+- Model endpoints.
+- Agent frameworks.
+- Agent runtimes.
+- Tools.
+- MCP servers.
+- Data pipelines.
+
+For every asset, maintain:
+
+- Unique identifier.
+- Organization.
+- Environment.
+- Asset owner.
+- Asset category.
+- Criticality.
+- Technical metadata.
+- Source.
+- Last observed time.
+- Security status.
+- Dependencies.
+- Relationships.
+- Data classification.
+- Lifecycle status.
+
+Support manual registration, APIs, authorized connectors and agent-based discovery.
+
+Unknown assets must be clearly distinguished from verified assets.
+
+## DIVISION 03 — AGENT UNIVERSE
+
+This is a first-class product division.
+
+Create a centralized registry of all registered organizational AI agents.
+
+Each agent must have:
+
+- Agent ID.
+- Organization ID.
+- Owner.
+- Responsible human.
+- Framework.
+- Runtime.
+- Model provider.
+- Model name.
+- Model version.
+- Deployment location.
+- Registered tools.
+- MCP servers.
+- Allowed resources.
+- Allowed actions.
+- Data access boundaries.
+- Approved objectives.
+- Trust status.
+- Lifecycle status.
+- Last heartbeat.
+- Activity history.
+- Risk classification.
+
+Support:
+
+- Agent registration.
+- Agent discovery.
+- Agent ownership changes.
+- Agent health.
+- Agent inventory.
+- Agent capability inventory.
+- Agent versioning.
+- Agent suspension.
+- Agent revocation.
+- Agent retirement.
+- Unknown-agent reporting.
+
+Build a graph showing agents, identities, models, tools, data and resources.
+
+Do not equate an agent's self-reported identity with verified identity.
+
+## DIVISION 04 — AGENT TRUST AND IDENTITY
+
+Implement an independent agent identity and authorization infrastructure.
+
+Requirements:
+
+- Unique machine identities.
+- OIDC and OAuth-compatible integrations where appropriate.
+- Short-lived credentials.
+- Workload identity.
+- Mutual authentication where supported.
+- Per-agent permissions.
+- Per-tool permissions.
+- Resource-level authorization.
+- Task-bound authorization.
+- Delegation tracking.
+- Human authorization context.
+- Token revocation.
+- Credential rotation.
+- Authorization decision records.
+- Identity anomaly detection.
+- Agent suspension.
+
+No agent may obtain unrestricted privileges simply because it belongs to another agent's workflow.
+
+The authorization service must make decisions independently of LLM output.
+
+## DIVISION 05 — UNIVERSAL TELEMETRY FABRIC
+
+Build the platform's central event architecture.
+
+It must ingest:
+
+- Identity events.
+- API events.
+- Network events.
+- Endpoint events.
+- Cloud events.
+- Application events.
+- Database events.
+- Model events.
+- Agent events.
+- Tool invocation events.
+- MCP communication events.
+- Policy decisions.
+- Simulation events.
+- Incident response events.
+
+Required capabilities:
+
+- REST ingestion.
+- Webhook ingestion.
+- Streaming ingestion.
+- Schema validation.
+- Source authentication.
+- Timestamp normalization.
+- Tenant attribution.
+- Event normalization.
+- Event enrichment.
+- Deduplication.
+- Correlation.
+- Durable persistence.
+- Queue monitoring.
+- Retry handling.
+- Dead-letter processing.
+- Backpressure.
+- Replay.
+- Retention policies.
+- Data provenance.
+
+Create versioned canonical event schemas.
+
+Every event must preserve its source and provenance.
+
+Do not allow an untrusted event to become a trusted security decision without validation.
+
+## DIVISION 06 — THREAT INTELLIGENCE NETWORK
+
+Integrate authorized authoritative intelligence sources.
+
+Initial source candidates:
+
+- CERT-In advisories.
+- NIST vulnerability information.
+- National Vulnerability Database.
+- CISA Known Exploited Vulnerabilities.
+- MITRE ATT&CK.
+- MITRE ATLAS.
+- STIX/TAXII-compatible feeds.
+- Authorized vendor advisories.
+- Organization-specific intelligence feeds.
+
+For every intelligence record, store:
+
+- Source.
+- Source identifier.
+- Original publication time.
+- Retrieval time.
+- Last modified time.
+- Validity.
+- Confidence.
+- Relevant indicators.
+- Relevant vulnerabilities.
+- Related techniques.
+- Affected products.
+- Evidence.
+- Source URL.
+- Licensing and permitted-use information.
+
+Do not fabricate threat intelligence.
+
+Do not automatically classify an indicator as malicious without evidence or confidence information.
+
+Correlate threat intelligence with actual organizational assets.
+
+## DIVISION 07 — RED FORCE COMMAND
+
+Red Force is the adversarial security validation division.
+
+It exists to discover weaknesses and validate defensive controls.
+
+It is not an unrestricted attack system.
+
+### Red Force agent units
+
+1. Recon Intelligence Agent.
+2. Vulnerability Assessment Agent.
+3. Identity Exposure Assessment Agent.
+4. Agent Attack-Surface Evaluation Agent.
+5. Prompt-Injection Resilience Evaluator.
+6. Tool Permission Assessment Agent.
+7. Supply Chain Assessment Agent.
+8. Model Integrity Assessment Agent.
+9. Scenario Planning Agent.
+10. Simulation Coordinator.
+11. Evidence Collection Agent.
+12. Defense Validation Analyst.
+
+### Red Force functions
+
+- Authorized asset assessment.
+- Vulnerability prioritization.
+- Configuration assessment.
+- Identity permission assessment.
+- Agent boundary assessment.
+- Prompt-injection resilience testing in controlled fixtures.
+- Tool permission testing.
+- Supply chain verification.
+- Model artifact provenance checks.
+- Isolated scenario execution.
+- Defensive control validation.
+- Evidence generation.
+- Remediation verification.
+
+### Mandatory Red Force controls
+
+Every simulation must have:
+
+- Verified authorization.
+- Signed scope.
+- Explicit target inventory.
+- Approved scenario.
+- Isolated execution environment.
+- Time limits.
+- Resource limits.
+- Network egress restrictions.
+- Credential isolation.
+- Execution monitoring.
+- Emergency stop.
+- Cleanup verification.
+- Immutable or tamper-evident audit records.
+
+Red Force must not perform unauthorized attacks against real systems.
+
+No uncontrolled destructive execution, persistence, stealth, credential theft, data exfiltration or public-target exploitation.
+
+Use safe simulation fixtures, emulators, synthetic data and authorized test infrastructure.
+
+## DIVISION 08 — BLUE FORCE COMMAND
+
+Blue Force is the continuous defensive operational division.
+
+It protects the organization's authorized digital environment.
+
+### Blue Force units
+
+1. Sentinel Monitoring Agent.
+2. Threat Detection Agent.
+3. Agent Behavior Guardian.
+4. Identity Guardian.
+5. Infrastructure Guardian.
+6. Cloud Security Guardian.
+7. Network Security Guardian.
+8. Application Security Guardian.
+9. Model Guardian.
+10. Data Guardian.
+11. Supply Chain Guardian.
+12. Investigation Agent.
+13. Response Strategist.
+14. Recovery Coordinator.
+15. Defense Validation Agent.
+
+### Blue Force responsibilities
+
+- Continuous monitoring.
+- Security event analysis.
+- Behavioral anomaly detection.
+- Agent action monitoring.
+- Identity anomaly detection.
+- Tool misuse detection.
+- Unauthorized access detection.
+- Threat correlation.
+- Risk prioritization.
+- Alert generation.
+- Incident creation.
+- Evidence collection.
+- Investigation.
+- Response planning.
+- Approval coordination.
+- Authorized containment.
+- Recovery.
+- Outcome verification.
+
+Security-critical decisions must use deterministic controls and validated evidence.
+
+AI agents may assist with contextual analysis, hypothesis generation, investigation and recommendations.
+
+They must not independently override policy.
+
+## DIVISION 09 — COMMAND INTELLIGENCE
+
+This is the central coordination system.
+
+Responsibilities:
+
+- Workflow orchestration.
+- Agent registration.
+- Agent health.
+- Task assignment.
+- Delegation.
+- Workflow state.
+- Event correlation.
+- Incident prioritization.
+- Investigation coordination.
+- Red–Blue coordination.
+- Policy integration.
+- Approval management.
+- Execution monitoring.
+- Conflict resolution.
+- Timeout handling.
+- Retry management.
+- Failure recovery.
+- Human command.
+
+Every agent must have an explicit contract.
+
+Each contract must specify:
+
+- Identity.
+- Purpose.
+- Input schema.
+- Output schema.
+- Available tools.
+- Permission scope.
+- Timeout.
+- Resource limits.
+- Model configuration.
+- Memory boundaries.
+- Failure behavior.
+- Audit requirements.
+
+Do not build an agent merely to increase the agent count.
+
+## DIVISION 10 — DIGITAL THREAT INTELLIGENCE GRAPH
+
+Build a relationship model connecting:
+
+- Organizations.
+- Agencies.
+- Assets.
+- Services.
+- Users.
+- Identities.
+- AI agents.
+- Models.
+- Tools.
+- Data sources.
+- APIs.
+- Events.
+- Findings.
+- Alerts.
+- Incidents.
+- Evidence.
+- Policies.
+- Approvals.
+- Executions.
+- Simulations.
+
+Support:
+
+- Relationship exploration.
+- Attack-path visualization using safe analytical models.
+- Dependency impact analysis.
+- Agent delegation tracing.
+- Identity-to-resource relationships.
+- Incident blast-radius analysis.
+- Historical relationship changes.
+- Evidence provenance.
+
+Start with PostgreSQL relational modeling and recursive relationships where practical.
+
+Introduce a dedicated graph database only when measurable query requirements justify it.
+
+## DIVISION 11 — PUBLIC INFORMATION INTEGRITY
+
+Build a governance-focused information integrity capability.
+
+It should help institutions establish whether digital information is:
+
+- From a verified source.
+- Published by an authorized system.
+- Modified after publication.
+- Properly versioned.
+- Supported by evidence.
+- Traceable to its origin.
+- Correctly timestamped.
+- Properly archived.
+
+Capabilities:
+
+- Source verification.
+- Document provenance.
+- Cryptographic hashes.
+- Signed publication records.
+- Version history.
+- Integrity verification.
+- Change tracking.
+- Duplicate and inconsistency detection.
+- Authorized publication audit.
+- Evidence references.
+
+Do not build an automatic censorship engine.
+
+Do not claim that a cryptographic hash proves factual accuracy.
+
+Do not classify political disagreement as malicious misinformation.
+
+Keep factual verification, authenticity, integrity and editorial judgment as distinct concepts.
+
+Require human review for consequential public-information decisions.
+
+## DIVISION 12 — INCIDENT AND CRISIS COMMAND
+
+Create a complete incident lifecycle system.
+
+States:
+
+- New.
+- Triage.
+- Investigating.
+- Confirmed.
+- Containment planned.
+- Awaiting approval.
+- Containing.
+- Contained.
+- Recovery.
+- Monitoring.
+- Resolved.
+- Closed.
+
+Every incident must contain:
+
+- Incident ID.
+- Tenant.
+- Severity.
+- Priority.
+- Affected assets.
+- Affected agents.
+- Event references.
+- Evidence.
+- Investigation timeline.
+- Hypotheses.
+- Confirmed findings.
+- Responsible operator.
+- Response proposals.
+- Approval records.
+- Execution outcomes.
+- Recovery status.
+- Closure rationale.
+
+Support incident ownership, escalation, collaboration, evidence export and post-incident review.
+
+## DIVISION 13 — DEFENSE ENFORCEMENT
+
+Implement a separate deterministic execution gateway.
+
+Every consequential operation must pass through:
+
+1. User or agent authentication.
+2. Tenant authorization.
+3. Identity verification.
+4. Resource authorization.
+5. Scope verification.
+6. Action schema validation.
+7. Policy evaluation.
+8. Approval verification.
+9. Idempotency validation.
+10. Execution constraints.
+11. Audit recording.
+12. Outcome verification.
+
+Support read-only operations first.
+
+Consequential actions require appropriate human approval.
+
+Implement emergency stops at platform, tenant, connector and simulation levels.
+
+## DIVISION 14 — DIGITAL RESILIENCE AND ASSURANCE
+
+Create a continuous assurance environment.
+
+Measure:
+
+- Asset discovery coverage.
+- Agent discovery coverage.
+- Agent identity coverage.
+- Telemetry coverage.
+- Detection coverage.
+- Alert precision.
+- False-positive rate.
+- Investigation time.
+- Mean time to acknowledge.
+- Mean time to respond.
+- Policy violation rate.
+- Unauthorized actions blocked.
+- Response execution success.
+- Recovery verification.
+- Simulation coverage.
+- Control effectiveness.
+- Data freshness.
+- Integration health.
+
+Every metric must have a documented formula, source and time window.
+
+Do not generate invented risk scores.
+
+## DIVISION 15 — GOVERNANCE, PRIVACY AND COMPLIANCE
+
+Build governance into the architecture.
+
+Support:
+
+- Multi-tenant isolation.
+- Data classification.
+- Retention policies.
+- Privacy controls.
+- Access reviews.
+- Role-based permissions.
+- Attribute-based permissions where required.
+- Consent and lawful-purpose records where applicable.
+- Data residency configuration.
+- Audit evidence.
+- Policy versioning.
+- Administrative oversight.
+- Regulatory mapping.
+- Security-control mapping.
+- Evidence export.
+- Incident accountability.
+
+Use appropriate frameworks as reference points:
+
+- NIST Cybersecurity Framework.
+- NIST AI Risk Management Framework.
+- NIST AI agent identity and authorization guidance.
+- OWASP Securing Agentic Applications.
+- OWASP Top 10 for Agentic Applications.
+- MITRE ATT&CK.
+- MITRE ATLAS.
+- ISO 27001 control mapping.
+- Applicable Indian cybersecurity and data-protection requirements.
+
+Do not claim certification or regulatory compliance without independent validation.
+
+# PART V — THE SIGNATURE CAPABILITY
+
+## AGENT-TO-AGENT DEFENSE
+
+This is the most important differentiating capability.
+
+The platform must understand interactions among autonomous agents.
+
+Consider this scenario:
+
+An organization's internal AI agent has access to approved repositories and development tools.
+
+Untrusted repository content contains a malicious instruction.
+
+The agent attempts an unexpected tool operation.
+
+HF-CDF must:
+
+1. Identify the registered agent.
+2. Validate its identity.
+3. Retrieve its approved task scope.
+4. Retrieve its permitted tool set.
+5. Observe the tool invocation.
+6. Evaluate the action against deterministic policy.
+7. Identify any scope violation.
+8. Block the operation through the enforcement gateway before execution.
+9. Create an evidence-backed security event.
+10. Have Blue Force investigate the incident.
+11. Correlate related identities, resources and activity.
+12. Create a response recommendation.
+13. Obtain human approval where needed.
+14. Record the action and outcome.
+15. Run an authorized isolated Red Force validation scenario.
+16. Verify that the defensive control works.
+
+Build this workflow with real persistent data and automated tests.
+
+Do not represent it using a fabricated animation.
+
+# PART VI — TECHNICAL ARCHITECTURE
+
+## Technology baseline
+
+Preserve the existing selected technologies.
+
+Frontend:
+- React.
+- TypeScript.
+- Vite.
+
+Backend:
+- Python.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy.
+
+Database:
+- PostgreSQL.
+
+Infrastructure:
+- Docker Compose for local development.
+- Redis where justified.
+- Durable workflow orchestration.
+- Object storage for evidence.
+- OpenTelemetry.
+- OIDC identity integration.
+- Policy-as-code engine.
+- Secrets management.
+
+AI:
+- Provider-independent model gateway.
+- Explicit model versioning.
+- Prompt versioning.
+- Structured agent contracts.
+- Bounded tool execution.
+- Evaluation harness.
+- Token and cost monitoring.
+- Agent traceability.
+
+Architecture rules:
+
+- Use a modular monolith initially.
+- Separate logical domains and bounded contexts.
+- Introduce microservices only when scaling or security boundaries justify them.
+- Use durable event processing for asynchronous workflows.
+- Use PostgreSQL transactions for critical state changes.
+- Use idempotency keys for consequential operations.
+- Use transactional outbox patterns where necessary.
+- Support schema versioning.
+- Maintain backward-compatible APIs where practical.
+
+## Core backend domains
+
+1. Identity.
+2. Organizations.
+3. Tenant management.
+4. Asset intelligence.
+5. Agent registry.
+6. Agent identity.
+7. Telemetry.
+8. Threat intelligence.
+9. Detection.
+10. Red Force.
+11. Blue Force.
+12. Orchestration.
+13. Incident management.
+14. Evidence.
+15. Policy.
+16. Response execution.
+17. Assurance.
+18. Audit.
+19. Integrations.
+20. Governance.
+
+# PART VII — DATA ARCHITECTURE
+
+Create proper database schemas, relationships, migrations and constraints.
+
+Required entities:
+
+- tenants.
+- users.
+- memberships.
+- roles.
+- permissions.
+- assets.
+- asset_relationships.
+- integrations.
+- integration_credentials.
+- agents.
+- agent_versions.
+- agent_identities.
+- agent_capabilities.
+- agent_tools.
+- agent_delegations.
+- agent_runs.
+- agent_actions.
+- telemetry_sources.
+- raw_events.
+- normalized_events.
+- event_relationships.
+- detection_rules.
+- threat_indicators.
+- vulnerabilities.
+- findings.
+- alerts.
+- incidents.
+- investigations.
+- evidence_records.
+- policies.
+- policy_versions.
+- policy_decisions.
+- response_proposals.
+- approvals.
+- action_executions.
+- simulations.
+- simulation_scopes.
+- simulation_results.
+- assurance_metrics.
+- audit_records.
+
+For each entity define:
+
+- Primary key.
+- Foreign keys.
+- Tenant scope.
+- Required attributes.
+- Constraints.
+- Indexes.
+- Lifecycle.
+- Retention.
+- Authorization requirements.
+
+Use PostgreSQL row-level security as a defense-in-depth mechanism.
+
+Do not rely solely on frontend tenant filtering.
+
+# PART VIII — UNIVERSAL EVENT CONTRACT
+
+Create a versioned canonical event model.
+
+Required fields:
+
+- event_id.
+- schema_version.
+- tenant_id.
+- event_type.
+- source_type.
+- source_id.
+- observed_at.
+- received_at.
+- actor_type.
+- actor_id.
+- agent_id, when applicable.
+- resource_id.
+- action.
+- outcome.
+- severity.
+- correlation_id.
+- trace_id.
+- provenance.
+- classification.
+- integrity_metadata.
+- payload.
+
+Use typed schemas and validation.
+
+Untrusted fields must remain untrusted.
+
+Do not allow event payloads to directly execute instructions or tools.
+
+# PART IX — FRONTEND COMMAND ENVIRONMENT
+
+Build a premium, operational command interface.
+
+Design direction:
+
+- Advanced enterprise cybersecurity.
+- Deep navy visual foundation.
+- Blue and cyan defensive identity.
+- Restrained red adversarial identity.
+- Clean information hierarchy.
+- High-density operational data.
+- Clear status indicators.
+- Real-time activity visualization.
+- Accessible controls.
+- Responsive layouts.
+- Professional typography.
+- No unnecessary visual clutter.
+
+Main navigation:
+
+1. Command Center.
+2. Civic Digital Intelligence.
+3. Digital Infrastructure.
+4. Agent Universe.
+5. Agent Trust Center.
+6. Red Force Command.
+7. Blue Force Command.
+8. Threat Intelligence.
+9. Incident Command.
+10. Defense Operations.
+11. Intelligence Graph.
+12. Public Information Integrity.
+13. Digital Resilience.
+14. Assurance Center.
+15. Governance and Administration.
+
+## Command Center
+
+Show:
+
+- Verified organizational asset count.
+- Registered agent count.
+- Unknown agent findings.
+- Active incidents.
+- Critical alerts.
+- Telemetry health.
+- Integration health.
+- Red Force simulation status.
+- Blue Force operational status.
+- Pending approvals.
+- Defensive validation results.
+- Recent events.
+- Critical service dependencies.
+
+All values must come from real backend data.
+
+## Red Force Command
+
+Show:
+
+- Authorized scope.
+- Scenario catalogue.
+- Simulation schedule.
+- Sandbox health.
+- Active simulations.
+- Resource limits.
+- Execution logs.
+- Findings.
+- Evidence.
+- Validation outcomes.
+
+## Blue Force Command
+
+Show:
+
+- Monitoring status.
+- Agent health.
+- Detection activity.
+- Active investigations.
+- Evidence.
+- Response recommendations.
+- Approval queue.
+- Containment status.
+- Recovery verification.
+
+## Agent Universe
+
+Show:
+
+- Agent inventory.
+- Agent ownership.
+- Identity.
+- Model.
+- Framework.
+- Tools.
+- Permissions.
+- Relationships.
+- Health.
+- Last-seen time.
+- Risk findings.
+- Execution history.
+
+## Intelligence Graph
+
+Show relationships among assets, identities, agents, models, tools, events, incidents and evidence.
+
+All graph nodes must originate from actual records.
+
+## Public Information Integrity
+
+Show:
+
+- Verified sources.
+- Document provenance.
+- Integrity verification.
+- Publication versions.
+- Signed records.
+- Evidence history.
+- Changes requiring review.
+
+Do not create an automatic political content classification system.
+
+# PART X — REAL-TIME ENGINEERING
+
+Support:
+
+- Event ingestion.
+- Agent heartbeat.
+- Event processing.
+- Workflow state.
+- Incident updates.
+- Approval notifications.
+- Simulation progress.
+- Connector health.
+- Action execution status.
+
+Use SSE or WebSockets when justified.
+
+Use real event streams.
+
+Do not create fake live activity using setInterval and invented values.
+
+Provide reconnect behavior, sequence handling and clear stale-data indicators.
+
+# PART XI — AI AGENT ENGINEERING
+
+Build a reusable agent runtime.
+
+Every agent requires:
+
+- Unique identity.
+- Registered purpose.
+- Task schema.
+- Input validation.
+- Output validation.
+- Model configuration.
+- Tool permissions.
+- Context boundaries.
+- Memory policy.
+- Timeout.
+- Token budget.
+- Retry policy.
+- Execution budget.
+- Audit trace.
+- Error state.
+- Evaluation record.
+
+Use deterministic code for authorization and security enforcement.
+
+Use AI for reasoning tasks where its uncertainty can be measured and its output can be reviewed.
+
+Do not let the model decide its own permissions.
+
+Do not let agents directly access unrestricted infrastructure credentials.
+
+Treat external content as untrusted.
+
+Implement protection against:
+
+- Direct prompt injection.
+- Indirect prompt injection.
+- Tool misuse.
+- Agent impersonation.
+- Identity escalation.
+- Memory poisoning.
+- Insecure inter-agent messaging.
+- Cascading agent failure.
+- Supply-chain compromise.
+- Data leakage.
+
+# PART XII — SECURITY AND SAFETY
+
+Implement:
+
+- OIDC.
+- MFA support.
+- RBAC.
+- Resource-level authorization.
+- Tenant isolation.
+- PostgreSQL RLS.
+- Secrets management.
+- Encryption in transit.
+- Encryption at rest.
+- Secure service identities.
+- Signed and validated agent messages.
+- Tool allowlists.
+- Policy-as-code.
+- Approval workflows.
+- Audit integrity.
+- Rate limiting.
+- Resource limits.
+- Network segmentation.
+- Default-deny egress for simulation sandboxes.
+- Backup and recovery.
+- Emergency stop.
+
+Red Force must never exceed explicit authorization.
+
+Production response actions must be policy-controlled.
+
+Human approval must be mandatory for consequential actions unless a separately reviewed, tightly scoped policy explicitly authorizes a safe operation.
+
+# PART XIII — EXTERNAL DATA AND INTEGRATION STRATEGY
+
+Build a provider-independent connector framework.
+
+For each connector define:
+
+- Source.
+- Authentication.
+- Permissions.
+- Data classification.
+- Data mapping.
+- Rate limits.
+- Pagination.
+- Retry strategy.
+- Error handling.
+- Data freshness.
+- Retention.
+- Audit.
+- Health monitoring.
+
+Prioritize:
+
+1. CERT-In intelligence.
+2. NVD.
+3. CISA KEV.
+4. MITRE ATT&CK.
+5. MITRE ATLAS.
+6. STIX/TAXII-compatible intelligence.
+7. OIDC identity providers.
+8. Cloud audit logs.
+9. Endpoint telemetry.
+10. Agent runtime integrations.
+11. OpenTelemetry.
+12. Authorized institutional APIs.
+
+Do not hardcode access credentials.
+
+Do not invent integration success.
+
+Clearly distinguish connected, disconnected, degraded and unsupported integrations.
+
+# PART XIV — IMPLEMENTATION ROADMAP
+
+Implement in dependency order.
+
+PHASE 0 — REPOSITORY AND ARCHITECTURE ASSESSMENT
+
+- Inspect the existing repository.
+- Inventory implemented modules.
+- Identify missing functionality.
+- Assess security risks.
+- Establish target architecture.
+- Define migration strategy.
+- Produce implementation tickets.
+
+PHASE 1 — SECURE PLATFORM FOUNDATION
+
+- Authentication.
+- Organizations.
+- Tenant isolation.
+- Users.
+- RBAC.
+- Audit.
+- Configuration.
+
+PHASE 2 — DIGITAL ENVIRONMENT INTELLIGENCE
+
+- Asset registry.
+- Asset relationships.
+- Infrastructure metadata.
+- Integration framework.
+
+PHASE 3 — AGENT UNIVERSE
+
+- Agent registry.
+- Agent identities.
+- Capabilities.
+- Tool inventory.
+- Delegation.
+- Heartbeats.
+
+PHASE 4 — TELEMETRY FABRIC
+
+- Canonical event schema.
+- Ingestion APIs.
+- Event validation.
+- Persistence.
+- Queue processing.
+- Event correlation.
+
+PHASE 5 — TRUST AND POLICY PLANE
+
+- Agent authorization.
+- Policy engine.
+- Tool gateway.
+- Scope enforcement.
+- Approvals.
+- Audit.
+
+PHASE 6 — THREAT INTELLIGENCE
+
+- Authoritative data connectors.
+- Vulnerability correlation.
+- Threat mapping.
+- Asset prioritization.
+
+PHASE 7 — DETECTION AND INCIDENT MANAGEMENT
+
+- Detection rules.
+- Correlation.
+- Alerts.
+- Investigation.
+- Evidence.
+- Incident lifecycle.
+
+PHASE 8 — BLUE FORCE
+
+- Sentinel.
+- Agent Guardian.
+- Identity Guardian.
+- Infrastructure Guardian.
+- Investigation.
+- Response strategy.
+- Recovery validation.
+
+PHASE 9 — RED FORCE
+
+- Isolated sandbox.
+- Authorized scope.
+- Scenario catalogue.
+- Simulation coordinator.
+- Safe assessment.
+- Evidence collection.
+- Defense validation.
+
+PHASE 10 — COMMAND INTELLIGENCE
+
+- Durable orchestration.
+- Agent delegation.
+- Workflow state.
+- Conflict resolution.
+- Retry and recovery.
+- Human command.
+
+PHASE 11 — CIVIC AND PUBLIC INFORMATION GOVERNANCE
+
+- Authorized service monitoring.
+- Provenance.
+- Integrity records.
+- Institutional accountability.
+- Interoperability.
+
+PHASE 12 — ASSURANCE AND RESILIENCE
+
+- Metrics.
+- Control effectiveness.
+- Recovery validation.
+- Reporting.
+- Audit exports.
+
+PHASE 13 — PRODUCTION HARDENING
+
+- Performance.
+- Load testing.
+- Security assessment.
+- Backup and restore.
+- Disaster recovery.
+- Observability.
+- Deployment.
+- Operational runbooks.
+
+# PART XV — FIRST REAL END-TO-END WORKFLOW
+
+The initial flagship workflow must be fully implemented.
+
+1. Register a tenant.
+2. Register an authorized digital asset.
+3. Register an AI agent.
+4. Register its identity.
+5. Register its permitted tools.
+6. Register an approved task scope.
+7. Connect a real test agent.
+8. Ingest its real activity events.
+9. Validate and persist events.
+10. Observe a controlled unauthorized tool-call attempt.
+11. Evaluate it against deterministic policy.
+12. Block the action before execution.
+13. Generate a security event.
+14. Have Blue Force investigate.
+15. Identify the agent, task and tool context.
+16. Produce an evidence-backed incident.
+17. Generate a response proposal.
+18. Require human approval for consequential action.
+19. Execute an authorized test-environment response.
+20. Independently verify the result.
+21. Run an approved isolated Red Force validation.
+22. Confirm the defensive control's effectiveness.
+23. Generate an assurance report.
+24. Preserve all audit and evidence records.
+
+The complete workflow must be reproducible.
+
+# PART XVI — TESTING AND ACCEPTANCE
+
+Every module must have:
+
+- Unit tests.
+- Integration tests.
+- API tests.
+- Authorization tests.
+- Tenant isolation tests.
+- Failure tests.
+- Data integrity tests.
+- Security tests.
+- Performance tests where applicable.
+- End-to-end tests.
+
+Additional tests:
+
+- Agent identity spoofing.
+- Unauthorized delegation.
+- Tool permission escalation.
+- Prompt injection.
+- Untrusted event injection.
+- Cross-tenant access.
+- Policy bypass attempts.
+- Agent timeout.
+- Duplicate event delivery.
+- Queue failure.
+- Workflow interruption.
+- Connector outage.
+- Approval expiration.
+- Emergency stop.
+- Evidence integrity.
+
+Never mark a capability complete based only on its frontend.
+
+# PART XVII — OBSERVABILITY AND PRODUCTION READINESS
+
+Implement:
+
+- Structured logs.
+- Distributed traces.
+- Metrics.
+- Agent execution traces.
+- Workflow traces.
+- Connector health.
+- Queue health.
+- Database health.
+- Model latency.
+- Model cost.
+- Error budgets.
+- SLOs.
+- Alerts.
+- Runbooks.
+- Backup monitoring.
+- Disaster recovery procedures.
+
+Define measurable SLOs based on actual requirements and load testing.
+
+Do not invent performance claims.
+
+# PART XVIII — ENGINEERING EXECUTION RULES
+
+For every feature:
+
+1. Explain its purpose.
+2. Specify its architecture.
+3. Define its database changes.
+4. Define its API contracts.
+5. Implement backend behavior.
+6. Implement frontend behavior.
+7. Add authorization.
+8. Add audit logging.
+9. Add automated tests.
+10. Run the tests.
+11. Verify behavior.
+12. Update documentation.
+13. Record known limitations.
+
+Never:
+
+- Use fake data as real data.
+- Build buttons without real functionality.
+- Invent operational status.
+- Claim live monitoring without telemetry.
+- Claim autonomous defense without tested enforcement.
+- Claim Red Force validation without an isolated execution environment.
+- Claim public-sector deployment or certification without evidence.
+- Hide architectural limitations.
+
+Use explicit implementation statuses:
+
+- Designed.
+- Planned.
+- In development.
+- Implemented.
+- Tested.
+- Validated.
+- Production-ready.
+
+# PART XIX — FIRST RESPONSE REQUIRED FROM THE CODING AGENT
+
+Do not start by writing the entire application.
+
+First inspect the repository and provide:
+
+1. Existing technology inventory.
+2. Current repository structure.
+3. Existing working features.
+4. Missing modules.
+5. Existing security weaknesses.
+6. Architecture limitations.
+7. Database assessment.
+8. API assessment.
+9. Frontend assessment.
+10. AI-agent implementation assessment.
+11. Integration assessment.
+12. Target architecture.
+13. Migration plan.
+14. Prioritized engineering backlog.
+15. First implementation milestone.
+
+Then implement only the first approved milestone.
+
+Do not silently destroy or replace existing functionality.
+
+# FINAL PRODUCT DIRECTIVE
+
+HF-CDF must become an integrated digital governance and cyber resilience environment.
+
+It must understand the digital infrastructure, public-facing systems, identities, agents, models, tools, data and operational dependencies of the organizations that authorize its use.
+
+It must observe actual activity, correlate evidence, detect security risks, validate defenses, govern autonomous agents and coordinate controlled responses.
+
+Its defining capability is the continuous relationship between:
+
+DIGITAL ENVIRONMENT INTELLIGENCE
+
+AGENT TRUST AND GOVERNANCE
+
+RED FORCE ADVERSARIAL VALIDATION
+
+BLUE FORCE DEFENSIVE OPERATIONS
+
+COMMAND INTELLIGENCE
+
+PUBLIC DIGITAL RESILIENCE
+
+MEASURABLE ASSURANCE
+
+Build the actual system, not a visual representation of the idea.
+
+Technical correctness, safety, privacy, interoperability, auditability and measurable outcomes take precedence over feature count, animations and marketing language.

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: hf-cdf-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: hfcdf
+      POSTGRES_USER: hfcdf_app
+      POSTGRES_PASSWORD: local_dev_password_change_me
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - hfcdf_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hfcdf_app -d hfcdf"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  hfcdf_postgres_data:

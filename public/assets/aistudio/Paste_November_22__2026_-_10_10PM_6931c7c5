@@ -1,0 +1,1020 @@
+# HF-CDF GLOBAL
+# MASTER ENTERPRISE PRODUCT ENGINEERING DIRECTIVE
+
+## GLOBAL MULTI-TENANT AUTONOMOUS CYBER DEFENSE AND SECURITY OPERATIONS PLATFORM
+
+**Product:** HF-CDF GLOBAL
+
+**Product category:** B2B Enterprise Cybersecurity SaaS / Managed Security Platform / Autonomous Security Operations
+
+**Business model:** Enterprise subscriptions, dedicated deployments, managed security services, usage-based security telemetry and premium response services.
+
+**Primary mission:** Protect the digital infrastructure, applications, identities, data, cloud environments, software supply chains and AI-agent ecosystems of multiple organizations through a unified, distributed and policy-governed cyber defense platform.
+
+**Primary operational forces:** RED FORCE and BLUE FORCE.
+
+**Primary architecture:** Global Control Plane + Regional Control Planes + Isolated Customer Data Planes + Customer-Resident Security Agents.
+
+**Engineering objective:** Build a functioning, secure, scalable and commercially deployable enterprise cybersecurity platform. Do not build a demonstration-only interface.
+
+---
+
+# 0. YOUR ROLE
+
+Operate as a complete principal engineering organization.
+
+You are simultaneously responsible for:
+
+- Chief Technology Officer.
+- Chief Product Architect.
+- Principal Distributed Systems Architect.
+- Enterprise Security Architect.
+- Multi-Tenant SaaS Architect.
+- AI Agent Systems Architect.
+- Cloud Infrastructure Architect.
+- Security Operations Architect.
+- Data Platform Architect.
+- Site Reliability Engineer.
+- DevSecOps Engineer.
+- Frontend Engineering Lead.
+- Backend Engineering Lead.
+- Product Design Director.
+- Enterprise Integration Architect.
+- Compliance and Governance Architect.
+
+Make engineering decisions as if the platform will eventually serve thousands of organizations across multiple industries and geographic regions.
+
+Do not sacrifice security or isolation for development convenience.
+
+Do not invent integrations, customer access, data, security events or operational status.
+
+Do not claim production readiness without evidence.
+
+# 1. THE BUSINESS AND PRODUCT VISION
+
+HF-CDF is a global B2B cybersecurity platform.
+
+Our customers are organizations that need continuous protection of their digital environments.
+
+Potential customers include:
+
+- Financial institutions.
+- Banks.
+- Insurance companies.
+- Healthcare organizations.
+- Hospitals.
+- Pharmaceutical companies.
+- Technology companies.
+- Software development companies.
+- Cloud-native businesses.
+- AI companies.
+- Telecommunications companies.
+- Manufacturing organizations.
+- Logistics companies.
+- Retail businesses.
+- Educational institutions.
+- Government contractors.
+- Large enterprises.
+- Small and medium-sized businesses.
+
+The platform must be industry-extensible.
+
+It must not assume every customer has the same infrastructure or compliance requirements.
+
+The customer owns its systems, data, infrastructure and authorization decisions.
+
+HF-CDF provides the security platform, operational intelligence, authorized monitoring, defensive agents, security validation and response orchestration.
+
+The customer explicitly approves what HF-CDF can observe and what it can do.
+
+# 2. CORE PRODUCT PROMISE
+
+One global command platform.
+
+Thousands of independently protected organizations.
+
+A unified security intelligence layer.
+
+Customer-controlled deployments.
+
+Distributed defensive agents.
+
+Coordinated Red Force and Blue Force operations.
+
+Real-time security visibility.
+
+Evidence-backed incident response.
+
+Measurable defensive assurance.
+
+The platform must deliver these capabilities through actual software and verified integrations.
+
+# 3. GLOBAL ARCHITECTURE
+
+Implement a distributed multi-tenant architecture with four major layers.
+
+## LAYER A — GLOBAL CONTROL PLANE
+
+Responsibilities:
+
+- Tenant lifecycle.
+- Customer onboarding.
+- Subscription management.
+- Licensing.
+- Regional assignment.
+- Deployment orchestration.
+- Agent fleet inventory.
+- Agent version management.
+- Policy distribution.
+- Global configuration.
+- Integration catalogue.
+- Platform-wide operational monitoring.
+- Customer fleet health.
+- Platform security.
+- Global incident coordination.
+- Global service metrics.
+- Internal SOC operations.
+- Usage metering.
+- Administrative audit.
+
+The global control plane must not automatically receive unrestricted customer telemetry or sensitive records.
+
+Store the minimum information needed to operate the platform.
+
+## LAYER B — REGIONAL CONTROL PLANES
+
+Deploy independently scalable regional environments.
+
+Responsibilities:
+
+- Regional tenant routing.
+- Regional API processing.
+- Regional orchestration.
+- Regional telemetry ingestion.
+- Regional security analytics.
+- Regional agent management.
+- Regional incident coordination.
+- Regional evidence services.
+- Regional retention.
+- Regional failover.
+
+Support customer-configurable data residency.
+
+A regional failure must not automatically compromise every other region.
+
+## LAYER C — CUSTOMER DATA PLANES
+
+Each customer must have an explicitly enforced security boundary.
+
+Support three deployment models:
+
+1. Pooled shared infrastructure with strong tenant isolation.
+2. Dedicated enterprise infrastructure.
+3. Customer-controlled or sovereign deployment.
+
+Customer data planes contain:
+
+- Local connectors.
+- Local telemetry collectors.
+- Customer agent runtime.
+- Agent identity gateway.
+- Tool execution gateway.
+- Local policy enforcement.
+- Customer integrations.
+- Event buffering.
+- Evidence storage.
+- Local security workflows.
+- Customer-specific configuration.
+
+Support AWS, Azure, Google Cloud, Kubernetes and on-premises deployments through provider-specific connectors.
+
+## LAYER D — CUSTOMER-RESIDENT DEFENSE AGENTS
+
+Build a secure installation package.
+
+It must be possible for an authorized customer administrator to deploy the HF-CDF agent runtime into their environment.
+
+The deployment must:
+
+- Register with the correct tenant.
+- Establish cryptographic identity.
+- Validate regional control-plane identity.
+- Obtain narrowly scoped credentials.
+- Enroll in authorized policies.
+- Report health.
+- Receive signed configuration.
+- Collect only permitted telemetry.
+- Support secure updates.
+- Support credential rotation.
+- Support revocation.
+- Support offline buffering.
+- Support emergency shutdown.
+- Produce verifiable audit records.
+
+Use outbound-first connectivity where practical.
+
+Do not require uncontrolled inbound access to customer networks.
+
+---
+
+# 4. MULTI-TENANT SAAS FOUNDATION
+
+Implement multi-tenancy as a foundational security boundary.
+
+Required entities:
+
+- Tenant.
+- Tenant domain.
+- Tenant owner.
+- Tenant administrators.
+- Tenant users.
+- Tenant roles.
+- Tenant subscriptions.
+- Tenant deployment.
+- Tenant region.
+- Tenant data classification.
+- Tenant integrations.
+- Tenant agents.
+- Tenant assets.
+- Tenant policies.
+- Tenant incidents.
+- Tenant evidence.
+- Tenant usage.
+
+Every customer-owned record must have a server-verified tenant context.
+
+Never trust tenant_id supplied by the frontend.
+
+Enforce tenant authorization at:
+
+- API gateway.
+- Application service.
+- Database query.
+- Object storage.
+- Search.
+- Event streaming.
+- Cache.
+- Background workers.
+- Agent execution.
+- Evidence retrieval.
+- Export.
+- Backup and restore.
+
+Use PostgreSQL row-level security as defense in depth.
+
+Test cross-tenant access at every layer.
+
+Never expose customer A's records to customer B.
+
+Implement tenant-specific quotas and resource limits.
+
+Implement tenant-aware encryption and key management.
+
+Support BYOK and customer-managed encryption keys for appropriate enterprise tiers.
+
+Maintain tenant-scoped audit trails.
+
+Platform-wide operators and customer administrators must have different permission domains.
+
+# 5. GLOBAL COMMAND CENTER
+
+Build the central operational command interface.
+
+It must present actual platform and customer-fleet data.
+
+Primary modules:
+
+1. Global Command.
+2. Customer Fleet.
+3. Tenant Intelligence.
+4. Infrastructure Command.
+5. Agent Fleet Command.
+6. Red Force Command.
+7. Blue Force Command.
+8. Threat Intelligence.
+9. Global Incident Command.
+10. Integration Operations.
+11. Regional Operations.
+12. Platform Reliability.
+13. Security Assurance.
+14. Compliance Operations.
+15. Commercial Operations.
+16. Usage and Billing.
+17. Administrative Governance.
+
+Global command metrics:
+
+- Active tenants.
+- Onboarded organizations.
+- Connected customer deployments.
+- Registered assets.
+- Registered agents.
+- Healthy agents.
+- Offline agents.
+- Critical incidents.
+- Open investigations.
+- Telemetry ingestion health.
+- Regional availability.
+- Connector failures.
+- Pending approvals.
+- Simulation status.
+- Response execution status.
+- Platform capacity.
+- Queue lag.
+- Storage utilization.
+- API latency.
+- Model usage and cost.
+
+Show actual counts and data freshness.
+
+Distinguish measured values, estimates and unavailable information.
+
+Never generate fake live metrics.
+
+# 6. CUSTOMER COMMAND CENTER
+
+Each tenant receives an isolated customer portal.
+
+Modules:
+
+- Organization Overview.
+- Digital Asset Inventory.
+- Cloud Security.
+- Network Security.
+- Endpoint Security.
+- Identity Security.
+- Application Security.
+- AI and Agent Security.
+- Data Protection.
+- Threat Intelligence.
+- Red Force.
+- Blue Force.
+- Incident Command.
+- Security Operations.
+- Evidence.
+- Compliance.
+- Digital Resilience.
+- Integrations.
+- Policies.
+- User Management.
+- Billing.
+- Reports.
+
+Customer users must never be able to access another customer's resources.
+
+Provide delegated access to HF-CDF analysts only where the customer has explicitly authorized it.
+
+Support temporary, scoped, auditable access grants.
+
+# 7. RED FORCE — AUTHORIZED ADVERSARIAL VALIDATION
+
+Red Force is the platform's defensive testing and adversarial validation division.
+
+Its purpose is to test customer-authorized security controls.
+
+Agent units:
+
+- Reconnaissance Assessment Agent.
+- Vulnerability Assessment Agent.
+- Identity Configuration Assessment Agent.
+- Cloud Security Assessment Agent.
+- Application Security Assessment Agent.
+- Agent Security Assessment Agent.
+- Supply Chain Assessment Agent.
+- Model Integrity Assessment Agent.
+- Scenario Coordinator.
+- Simulation Executor.
+- Evidence Collector.
+- Defensive Validation Analyst.
+
+Capabilities:
+
+- Authorized asset inventory assessment.
+- Configuration analysis.
+- Vulnerability prioritization.
+- Identity permission review.
+- Agent authorization testing.
+- Prompt-injection resilience testing in controlled fixtures.
+- Tool access policy testing.
+- Supply chain verification.
+- Security control validation.
+- Isolated attack simulation.
+- Remediation verification.
+- Evidence generation.
+
+Every Red Force operation requires:
+
+- Verified tenant authorization.
+- Signed scope.
+- Approved target inventory.
+- Approved test scenario.
+- Isolated execution environment.
+- Resource constraints.
+- Time constraints.
+- Egress restrictions.
+- Audit logging.
+- Emergency stop.
+- Cleanup verification.
+
+Do not allow uncontrolled attacks against public systems or third-party organizations.
+
+Do not implement autonomous destructive operations, credential theft, unauthorized exfiltration, stealth or persistence.
+
+# 8. BLUE FORCE — CONTINUOUS CUSTOMER DEFENSE
+
+Blue Force protects the authorized customer environment.
+
+Agent units:
+
+- Sentinel Monitoring Agent.
+- Threat Intelligence Agent.
+- Endpoint Guardian.
+- Cloud Guardian.
+- Network Guardian.
+- Identity Guardian.
+- Application Guardian.
+- Data Protection Guardian.
+- Agent Behavior Guardian.
+- Model Guardian.
+- Supply Chain Guardian.
+- Investigation Agent.
+- Forensics Agent.
+- Response Strategist.
+- Recovery Coordinator.
+- Validation Agent.
+
+Capabilities:
+
+- Telemetry monitoring.
+- Security event analysis.
+- Detection.
+- Behavioral anomaly detection.
+- Agent action monitoring.
+- Identity monitoring.
+- Cloud configuration monitoring.
+- Vulnerability correlation.
+- Threat intelligence enrichment.
+- Investigation.
+- Evidence collection.
+- Response recommendation.
+- Approval workflows.
+- Authorized containment.
+- Recovery coordination.
+- Recovery verification.
+
+AI agents must not bypass deterministic security policies.
+
+# 9. AGENT TRUST AND EXECUTION PLANE
+
+Create a dedicated security subsystem for all HF-CDF agents.
+
+Each agent must possess:
+
+- Unique identity.
+- Cryptographic credentials.
+- Tenant assignment.
+- Regional assignment.
+- Agent owner.
+- Purpose.
+- Allowed tools.
+- Allowed resources.
+- Permission scopes.
+- Task constraints.
+- Expiration.
+- Model configuration.
+- Execution limits.
+- Memory boundaries.
+- Audit trace.
+
+Implement:
+
+- Short-lived credentials.
+- Just-in-time authorization.
+- Zero standing privilege where practical.
+- Delegation attenuation.
+- Continuous authorization.
+- Token revocation.
+- Workload identity.
+- Signed agent messages.
+- Inter-agent authentication.
+- Tool allowlists.
+- Policy checks.
+- Agent kill switch.
+- Agent suspension.
+- Agent version control.
+- Agent evaluation.
+
+Never let an LLM determine its own authorization.
+
+All consequential tool execution must pass through the policy enforcement gateway.
+
+# 10. CROSS-CUSTOMER INTELLIGENCE
+
+Build a privacy-preserving intelligence layer.
+
+It must allow HF-CDF to identify relevant threat patterns across its customer fleet without exposing one customer's confidential information to another.
+
+Support:
+
+- Aggregated threat trends.
+- Campaign correlation.
+- Shared vulnerability intelligence.
+- Indicator correlation.
+- Privacy-preserving statistics.
+- Sanitized detection patterns.
+- Threat notification.
+- Tenant-specific relevance scoring.
+
+Rules:
+
+- No customer raw logs shared by default.
+- No customer secrets shared.
+- No cross-tenant searches without explicit authorization.
+- No customer-specific incident details disclosed to another tenant.
+- No training on customer data without explicit contractual authorization.
+- Preserve data provenance.
+- Support opt-in intelligence sharing.
+- Support tenant-specific data retention and deletion requirements.
+
+# 11. UNIVERSAL INTEGRATION FRAMEWORK
+
+Build a provider-independent connector framework.
+
+Priority integrations:
+
+## Cloud
+
+- AWS.
+- Microsoft Azure.
+- Google Cloud.
+- Kubernetes.
+
+## Identity
+
+- Microsoft Entra ID.
+- Okta.
+- Auth0.
+- Keycloak.
+- Generic OIDC providers.
+
+## Endpoint and infrastructure
+
+- Windows.
+- Linux.
+- macOS.
+- Container environments.
+- Endpoint security products.
+- EDR and XDR platforms.
+
+## Application and developer infrastructure
+
+- GitHub.
+- GitLab.
+- CI/CD platforms.
+- Container registries.
+- Artifact repositories.
+- API gateways.
+- Web application infrastructure.
+
+## Security tools
+
+- SIEM.
+- SOAR.
+- Vulnerability management.
+- Threat intelligence.
+- Cloud security.
+- Network detection.
+- Endpoint detection.
+
+## Data and observability
+
+- PostgreSQL.
+- MySQL.
+- Object storage.
+- OpenTelemetry.
+- Kafka-compatible streams.
+- Webhooks.
+- REST APIs.
+
+For every connector define:
+
+- Authentication.
+- Permission scopes.
+- Credential lifecycle.
+- Data schema.
+- Rate limits.
+- Pagination.
+- Retry.
+- Error handling.
+- Health status.
+- Data freshness.
+- Retention.
+- Audit.
+- Revocation.
+
+Build connectors incrementally.
+
+Never claim an integration works until it has been tested against the actual provider.
+
+# 12. DATA AND EVENT INFRASTRUCTURE
+
+Use an event-driven architecture.
+
+Recommended baseline:
+
+- PostgreSQL for transactional data.
+- Kafka or Redpanda for durable event transport when justified.
+- Redis for ephemeral caching.
+- ClickHouse for high-volume analytics where justified.
+- OpenSearch for event and evidence search where justified.
+- S3-compatible object storage for large artifacts.
+- OpenTelemetry for observability.
+
+Implement:
+
+- Event schemas.
+- Schema registry.
+- Tenant-aware routing.
+- Partitioning.
+- Backpressure.
+- Retry.
+- Dead-letter queues.
+- Event replay.
+- Deduplication.
+- Idempotency.
+- Data lineage.
+- Retention.
+- Lifecycle policies.
+- Encryption.
+- Access controls.
+
+Separate raw telemetry, normalized events, security findings and operational records.
+
+Do not route all telemetry through an LLM.
+
+Use deterministic processing for high-volume event classification and correlation.
+
+# 13. DISTRIBUTED SCALING
+
+Architect for thousands of organizations.
+
+Build a capacity model covering:
+
+- Tenant count.
+- Event rate.
+- Peak ingestion.
+- Agent executions.
+- Assets per tenant.
+- Concurrent users.
+- Storage growth.
+- Regional capacity.
+- Search load.
+- Incident processing.
+- Model inference cost.
+
+Support:
+
+- Horizontal scaling.
+- Regional isolation.
+- Tenant-aware sharding.
+- Partitioned event storage.
+- Queue backpressure.
+- Workload prioritization.
+- Noisy-neighbor protection.
+- Autoscaling.
+- Failure recovery.
+- Regional failover.
+- Backup and restore.
+- Disaster recovery.
+
+Define measurable service-level objectives.
+
+Do not claim any throughput until demonstrated through load tests.
+
+# 14. MULTI-LANGUAGE ENGINEERING STRATEGY
+
+Use languages according to responsibility.
+
+Frontend:
+- TypeScript.
+- React.
+
+Core backend:
+- Python.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy.
+
+High-performance collectors:
+- Go.
+- Rust where justified.
+
+Data:
+- SQL.
+
+Policy:
+- Rego.
+
+Infrastructure:
+- Terraform HCL.
+- Kubernetes YAML.
+
+Automation:
+- Bash.
+- PowerShell.
+
+Do not duplicate business logic across languages.
+
+Build versioned SDKs for supported customer environments.
+
+Build customer-facing localization independently of backend implementation languages.
+
+Support internationalization, time zones, currencies and regional date formats.
+
+# 15. SECURITY, PRIVACY AND GOVERNANCE
+
+Implement:
+
+- Strong authentication.
+- MFA.
+- OIDC.
+- RBAC.
+- Fine-grained authorization.
+- Tenant isolation.
+- Encryption in transit.
+- Encryption at rest.
+- Customer-managed keys.
+- Secrets management.
+- Signed deployments.
+- Software supply chain verification.
+- Secure update channels.
+- Audit integrity.
+- Data classification.
+- Retention policies.
+- Privacy controls.
+- Data residency.
+- Backup isolation.
+- Disaster recovery.
+- Vulnerability management.
+- Security testing.
+- Incident response.
+
+Use NIST CSF, NIST AI RMF, OWASP Agentic Application guidance, MITRE ATT&CK, MITRE ATLAS and relevant ISO 27001 controls as engineering references.
+
+Do not claim certification without independent assessment.
+
+# 16. COMMERCIAL PLATFORM
+
+Build the actual B2B business infrastructure.
+
+Required capabilities:
+
+- Customer registration.
+- Enterprise onboarding.
+- Organization verification.
+- Contract and authorization records.
+- Subscription plans.
+- Seat and asset licensing.
+- Telemetry usage metering.
+- Agent usage metering.
+- Region selection.
+- Deployment selection.
+- Billing.
+- Invoices.
+- Usage limits.
+- Upgrade and downgrade.
+- Renewal.
+- Trial management.
+- Customer support.
+- SLA configuration.
+- Service health notifications.
+- Customer success analytics.
+
+Suggested commercial tiers:
+
+1. Business.
+2. Professional.
+3. Enterprise.
+4. Dedicated / Sovereign.
+
+Do not hardcode pricing until operational costs and customer value are established.
+
+# 17. FRONTEND EXPERIENCE
+
+Design a world-class enterprise command center.
+
+Visual direction:
+
+- Advanced aerospace operations interface.
+- Premium enterprise cybersecurity.
+- Deep navy foundation.
+- Blue and cyan defensive identity.
+- Controlled red adversarial identity.
+- High-density real-time intelligence.
+- Professional typography.
+- Clear operational hierarchy.
+- Data visualization.
+- Geographic fleet views.
+- Incident timelines.
+- Agent relationship graphs.
+- Infrastructure dependency graphs.
+- Live operational status.
+
+Avoid decorative complexity that reduces usability.
+
+Build separate navigation and authorization for:
+
+- Global platform operators.
+- HF-CDF SOC analysts.
+- Customer security administrators.
+- Customer analysts.
+- Auditors.
+- Billing administrators.
+
+# 18. DEVELOPMENT ROADMAP
+
+Do not attempt to implement everything at once.
+
+PHASE 0 — REPOSITORY AUDIT AND SYSTEM DESIGN
+
+Inspect existing code.
+
+Identify working features, missing features, architectural risks and migration needs.
+
+PHASE 1 — MULTI-TENANT FOUNDATION
+
+Authentication, organizations, tenant isolation, RBAC, audit and subscription foundations.
+
+PHASE 2 — CUSTOMER ONBOARDING
+
+Tenant creation, regional assignment, customer portal, deployment configuration and integration authorization.
+
+PHASE 3 — CUSTOMER-RESIDENT CONNECTOR
+
+Secure enrollment, workload identity, health, telemetry collection and revocation.
+
+PHASE 4 — DIGITAL ASSET INTELLIGENCE
+
+Asset inventory, infrastructure metadata, dependencies and customer environment map.
+
+PHASE 5 — AGENT UNIVERSE
+
+Agent registry, agent identities, tool inventory, permissions, delegation and agent health.
+
+PHASE 6 — TELEMETRY FABRIC
+
+Event schemas, ingestion, normalization, persistence, queueing and search.
+
+PHASE 7 — POLICY AND ENFORCEMENT
+
+Deterministic authorization, action gateway, scoped execution and approvals.
+
+PHASE 8 — BLUE FORCE
+
+Monitoring, detection, investigation, incident management and defensive response.
+
+PHASE 9 — RED FORCE
+
+Authorized scope, isolated simulation, defensive validation and evidence.
+
+PHASE 10 — GLOBAL COMMAND CENTER
+
+Customer fleet, global operational intelligence, regional health and centralized orchestration.
+
+PHASE 11 — CROSS-CUSTOMER INTELLIGENCE
+
+Privacy-preserving threat correlation and intelligence sharing.
+
+PHASE 12 — ENTERPRISE INTEGRATIONS
+
+Cloud, identity, endpoint, application, security and observability integrations.
+
+PHASE 13 — DISTRIBUTED SCALING
+
+Regional deployment, sharding, capacity testing, resilience and failover.
+
+PHASE 14 — COMMERCIAL READINESS
+
+Billing, licensing, onboarding, support, SLA and customer operations.
+
+PHASE 15 — SECURITY AND PRODUCTION VALIDATION
+
+Independent security assessment, penetration testing, disaster recovery, load testing and operational readiness.
+
+# 19. FLAGSHIP END-TO-END WORKFLOW
+
+The first enterprise workflow must work from beginning to end.
+
+1. Create a customer account.
+2. Verify the organization.
+3. Create its isolated tenant.
+4. Assign its region.
+5. Select its deployment model.
+6. Obtain explicit integration authorization.
+7. Install the customer-resident connector.
+8. Establish cryptographic identity.
+9. Register customer assets.
+10. Register an AI agent.
+11. Define its permitted tools.
+12. Establish its task authorization.
+13. Collect actual telemetry.
+14. Process real events.
+15. Observe a controlled unauthorized tool-call attempt.
+16. Enforce deterministic authorization.
+17. Block the prohibited operation.
+18. Generate an evidence-backed event.
+19. Have Blue Force investigate.
+20. Generate an incident.
+21. Create a response proposal.
+22. Obtain required human approval.
+23. Execute a permitted test-environment response.
+24. Independently verify the result.
+25. Run an authorized isolated Red Force validation.
+26. Produce a customer audit report.
+27. Display the verified outcome in the customer portal.
+28. Display authorized operational health in Global Command.
+29. Verify tenant isolation through automated tests.
+
+This must be a working product workflow, not a simulated demonstration.
+
+# 20. ACCEPTANCE CRITERIA
+
+A feature is not complete until:
+
+- Backend implementation exists.
+- Database persistence exists.
+- API contracts exist.
+- Authentication works.
+- Authorization works.
+- Tenant isolation works.
+- Audit records exist.
+- Failure cases are tested.
+- Automated tests pass.
+- Frontend uses real backend data.
+- Documentation is updated.
+- Security implications are reviewed.
+
+Use explicit statuses:
+
+- Planned.
+- Designed.
+- In development.
+- Implemented.
+- Tested.
+- Validated.
+- Production-ready.
+
+# 21. IMMEDIATE CODING AGENT INSTRUCTIONS
+
+Before changing the codebase:
+
+1. Inspect every existing project folder.
+2. Identify the current frontend and backend architecture.
+3. Identify existing API routes.
+4. Identify the database schema.
+5. Identify authentication.
+6. Identify existing Red Force and Blue Force modules.
+7. Identify existing AI providers.
+8. Identify current integrations.
+9. Identify security weaknesses.
+10. Identify incomplete or decorative features.
+11. Create a technical debt report.
+12. Create a target architecture diagram.
+13. Create a dependency-aware development backlog.
+14. Create a phased implementation plan.
+
+Then stop and present the assessment.
+
+Do not rewrite the project without an explicit migration plan.
+
+After assessment, implement Phase 1 only.
+
+Do not proceed to subsequent phases until the current phase is implemented, tested and verified.
+
+# FINAL DIRECTIVE
+
+HF-CDF GLOBAL is intended to become a serious enterprise cybersecurity business.
+
+It must operate as a unified global platform with independent customer security boundaries.
+
+It must deploy authorized defensive agents into customer-controlled environments.
+
+It must provide continuous monitoring, threat intelligence, investigation, policy enforcement, defensive validation and controlled response.
+
+It must support multiple industries, cloud providers, infrastructure models, operating systems, agent frameworks and enterprise security ecosystems.
+
+The global command center must coordinate the platform without compromising customer sovereignty.
+
+The Red Force must validate security controls.
+
+The Blue Force must protect authorized customer environments.
+
+The governance plane must control every privileged action.
+
+The evidence system must prove what happened.
+
+The engineering must demonstrate what works.
+
+BUILD THE ACTUAL PLATFORM.
+
+DO NOT BUILD A SHOWCASE.
