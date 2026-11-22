@@ -16,7 +16,9 @@ const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
 const EPHEMERAL_SIGNING_SECRET =
   process.env.HFCDF_SESSION_SECRET && process.env.HFCDF_SESSION_SECRET.length >= 16
     ? process.env.HFCDF_SESSION_SECRET
-    : crypto.randomBytes(32).toString('hex');
+    : process.env.VERCEL && process.env.HFCDF_ADMIN_PASSCODE
+      ? crypto.createHmac('sha256', process.env.HFCDF_ADMIN_PASSCODE).update('hfcdf-vercel-session').digest('hex')
+      : crypto.randomBytes(32).toString('hex');
 
 const revokedTokens = new Set<string>();
 

@@ -887,6 +887,10 @@ export async function initLiveOpsEngine(context: LiveOpsContext) {
     summary: `Live Autonomous Operations initialized. Tracking ${liveAttacks.length} active intrusions and syncing public threat newsfeeds.`,
   });
 
+  if (process.env.VERCEL) {
+    return;
+  }
+
   // Immediately pull live public feeds in background
   refreshLiveNews().catch(() => {});
 

@@ -149,8 +149,24 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
-const PORT = 3000;
+export const app = express();
+const PORT = Number(process.env.PORT || 3000);
+
+app.use((req, res, next) => {
+  const configuredOrigin = process.env.CORS_ORIGIN || process.env.FRONTEND_ORIGIN;
+  const reqOrigin = req.headers.origin;
+  if (configuredOrigin && reqOrigin && (configuredOrigin === '*' || configuredOrigin.split(',').map((o) => o.trim()).includes(reqOrigin))) {
+    res.setHeader('Access-Control-Allow-Origin', reqOrigin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  }
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
+  next();
+});
 
 app.use(express.json());
 
@@ -3105,43 +3121,63 @@ app.post('/api/v2/regions/:regionId/failover', (req: Request, res: Response) => 
 });
 
 // ----------------------------------------------------
-// VITE / STATIC SERVING
+// SERVERLESS & NODE BOOTSTRAP
+// ----------------------------------------------------
+let serverInitPromise: Promise<void> | null = null;
+
+export async function ensureServerInitialized(): Promise<void> {
+  if (!serverInitPromise) {
+    serverInitPromise = (async () => {
+      await initOsFabric();
+      initAuthHub();
+      initPublicMlHub({ recordAudit });
+      initGovernanceHub({ recordAudit });
+      initMultiTenantHub({ recordAudit });
+      initAgentDefenseHub({
+        getIncidents: () => incidents,
+        getEvents: () => events,
+        getNetworkNodes: () => networkNodes,
+        recordAudit,
+        onRequireApproval: (reqInput) => {
+          enqueueHumanApproval({
+            tenantId: 'tenant-public-digital',
+            requestedBy: reqInput.requestedBy,
+            actionType: reqInput.actionType,
+            targetResource: reqInput.targetResource,
+            justification: reqInput.justification,
+            riskScore: reqInput.riskScore,
+            mlAdvisoryClass: reqInput.mlAdvisoryClass,
+            idempotencyKey: reqInput.idempotencyKey,
+          });
+        },
+      });
+      await initLiveOpsEngine({
+        getAgents: () => agents,
+        getIncidents: () => incidents,
+        getEvents: () => events,
+        getIocs: () => iocs,
+        getNetworkNodes: () => networkNodes,
+        getSharedMemories: () => sharedMemories,
+        recordAudit,
+      });
+    })().catch((err) => {
+      serverInitPromise = null;
+      throw err;
+    });
+  }
+  return serverInitPromise;
+}
+
+export default app;
+
+// ----------------------------------------------------
+// VITE / STATIC SERVING (LOCAL & DEDICATED NODE HOST)
 // ----------------------------------------------------
 async function startServer() {
-  await initOsFabric();
-  initAuthHub();
-  initPublicMlHub({ recordAudit });
-  initGovernanceHub({ recordAudit });
-  initMultiTenantHub({ recordAudit });
+  await ensureServerInitialized();
   const httpServer = http.createServer(app);
   initThreatWebSocketServer(httpServer, { incidents, events });
-  initAgentDefenseHub({
-    getIncidents: () => incidents,
-    getEvents: () => events,
-    getNetworkNodes: () => networkNodes,
-    recordAudit,
-    onRequireApproval: (reqInput) => {
-      enqueueHumanApproval({
-        tenantId: 'tenant-public-digital',
-        requestedBy: reqInput.requestedBy,
-        actionType: reqInput.actionType,
-        targetResource: reqInput.targetResource,
-        justification: reqInput.justification,
-        riskScore: reqInput.riskScore,
-        mlAdvisoryClass: reqInput.mlAdvisoryClass,
-        idempotencyKey: reqInput.idempotencyKey,
-      });
-    },
-  });
-  await initLiveOpsEngine({
-    getAgents: () => agents,
-    getIncidents: () => incidents,
-    getEvents: () => events,
-    getIocs: () => iocs,
-    getNetworkNodes: () => networkNodes,
-    getSharedMemories: () => sharedMemories,
-    recordAudit,
-  });
+
   if (process.env.NODE_ENV !== 'production') {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
@@ -3161,7 +3197,9 @@ async function startServer() {
   });
 }
 
-startServer().catch((err) => {
-  console.error('[HF-CDF] Failed to start server:', err);
-  process.exit(1);
-});
+if (!process.env.VERCEL) {
+  startServer().catch((err) => {
+    console.error('[HF-CDF] Failed to start server:', err);
+    process.exit(1);
+  });
+}

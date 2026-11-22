@@ -93,8 +93,11 @@ export default function App() {
           setAuthSession(res.session);
         }
       })
-      .catch(() => {
-        // default to login form
+      .catch((err: any) => {
+        if (!active) return;
+        if (err?.message && /non-JSON|unavailable|Failed to fetch/i.test(err.message)) {
+          setLoginError(err.message);
+        }
       })
       .finally(() => {
         if (active) setAuthStatusLoading(false);

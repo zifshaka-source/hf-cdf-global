@@ -355,15 +355,17 @@ export function initPublicMlHub(deps?: {
     persistMlState();
   }
 
-  // Start periodic public feed sync & retraining loop (non-blocking initial pull after 2.5s)
-  scheduleNextSyncTimer();
-  setTimeout(() => {
-    if (schedulerEnabled && !isSyncing) {
-      ingestPublicDataAndTrainModel({ trigger: 'boot' }).catch(() => {
-        // non-fatal background sync
-      });
-    }
-  }, 2500);
+  if (!process.env.VERCEL) {
+    // Start periodic public feed sync & retraining loop (non-blocking initial pull after 2.5s)
+    scheduleNextSyncTimer();
+    setTimeout(() => {
+      if (schedulerEnabled && !isSyncing) {
+        ingestPublicDataAndTrainModel({ trigger: 'boot' }).catch(() => {
+          // non-fatal background sync
+        });
+      }
+    }, 2500);
+  }
 }
 
 export function configureMlScheduler(params: {

@@ -15,9 +15,10 @@ import {
 } from '../src/core/types';
 import { sanitizeWorkspacePath } from '../src/core/os-compiler-utils';
 
-const DATA_DIR = path.join(process.cwd(), '.hf_cdf_data');
+const RUNTIME_STORAGE_ROOT = process.env.VERCEL ? os.tmpdir() : process.cwd();
+const DATA_DIR = path.join(RUNTIME_STORAGE_ROOT, '.hf_cdf_data');
 const DB_PATH = path.join(DATA_DIR, 'fabric.sqlite');
-export const WORKSPACE_DIR = path.join(process.cwd(), '.hf_cdf_workspace');
+export const WORKSPACE_DIR = path.join(RUNTIME_STORAGE_ROOT, '.hf_cdf_workspace');
 
 let SQL: SqlJsStatic | null = null;
 let db: Database | null = null;
@@ -238,9 +239,33 @@ console.log(JSON.stringify({ inspected: samples.length, flaggedCount: flagged.le
 
 export function persistDbToDisk() {
   if (!db) return;
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  const data = db.export();
-  fs.writeFileSync(DB_PATH, Buffer.from(data));
+  try {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+    const data = db.export();
+    fs.writeFileSync(DB_PATH, Buffer.from(data));
+  } catch {
+    // Non-fatal if serverless filesystem is temporarily constrained
+  }
+}
+
+function resolveSqlWasmPath(file: string): string {
+  const candidates = [
+    path.join(process.cwd(), 'node_modules/sql.js/dist', file),
+    path.join(path.dirname(fileURLToPathSafe()), '../node_modules/sql.js/dist', file),
+    path.join(process.cwd(), '.vercel/output/functions/api/index.func/node_modules/sql.js/dist', file),
+  ];
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) return candidate;
+  }
+  return candidates[0];
+}
+
+function fileURLToPathSafe(): string {
+  try {
+    return path.dirname(new URL(import.meta.url).pathname);
+  } catch {
+    return process.cwd();
+  }
 }
 
 export async function initOsFabric(): Promise<void> {
@@ -250,7 +275,7 @@ export async function initOsFabric(): Promise<void> {
   fs.mkdirSync(WORKSPACE_DIR, { recursive: true });
 
   SQL = await initSqlJs({
-    locateFile: (file: string) => path.join(process.cwd(), 'node_modules/sql.js/dist', file),
+    locateFile: (file: string) => resolveSqlWasmPath(file),
   });
 
   if (fs.existsSync(DB_PATH)) {
